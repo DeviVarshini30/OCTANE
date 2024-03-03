@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .container {
+        display: grid;
+        grid-template-columns: 1200px;
+        grid-template-rows: 1000px;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas: "main";
+        
+       
+        
+      }
+
+      .main {
+        display: grid;
+        grid-template-columns: 1200px;
+        grid-template-rows: 500px 500px 500px 500px 500px 500px 500px;
+        gap: 10px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+          "box1"
+          "box2"
+          "box3"
+          "box4"
+          "box5"
+          "box6"
+          "box7";
+        grid-area: main;
+        
+      }
+
+      .box1 {
+        display: grid;
+        grid-template-columns: 200px 500px 500px;
+        grid-template-rows: 100px 200px 200px;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+          "logo a11 a11"
+          "b11 b11 b11"
+          "b11 b11 b11";
+        grid-area: box1;
+
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.7),
+            rgba(0, 0, 0, 0.7)
+          ),
+          url(\netflix.jpeg);
+        background-size: cover;
+        background-position: center;
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif;
+        
+        /* width: 100%;
+        height: 100vh; */
+       
+      }
+
+      .logo {
+        grid-area: logo;
+        text-align: left;       
+      }
+      .logo>img{
+        width: 160px;
+        padding-left: 40px;
+        padding-top: 29px;
+      }
+
+
+      .a11 {
+        grid-area: a11;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 0;
+      }
+      .a11 > img {
+        text-align: left;
+        width: 20vh;
+margin-left: 10px;
+width: 150px;
+    
+        padding-top: 16px;
+        cursor: pointer;
+      }
+      .a11 > button {
+        display: inline-block;
+        padding: 7px 26px;
+        margin-left: 10px;
+        margin-right: 30px;
+        font-size: 12px;
+        border-radius: 4px;
+        background-color: red;
+        border: none;
+        color: white;
+        cursor: pointer;
+        /* padding-left: 20px; */
+        /* width: 10vh;
+        height: 4vh; */
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif;
+      }
+.a11 .language-btn{
+display: inline-flex;
+align-items: center;
+background: transparent;
+border: 1px solid #fff;
+padding: 7px 10px;
+margin-left: 750px;
+
+}
+.language-btn>img{
+  width: 10px;
+  margin-left: 10px;
+}
+
+      .b11 {
+        grid-area: b11;
+        color: white;
+        text-align: center;
+      }
+      .b11 > h1 {
+        color: white;
+        text-align: center;
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif;
+        font-size: 40px;
+        padding-left: 350px;
+        padding-right: 350px;
+      }
+
+      .box2 {
+        display: grid;
+        grid-template-columns: 600px 600px;
+        grid-template-rows: 500px;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas: "b21 b22";
+        grid-area: box2;
+        background-color: #000000;
+        
+      }
+
+      .b21 {
+        grid-area: b21;
+        color: white;
+        text-align: left;
+        padding-left: 90px;
+        padding-top: 120px;
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif;
+        font-size: 25px;
+      }
+      .b21 > p {
+        font-size: 16px;
+      }
+
+      .b22 {
+        grid-area: b22;
+        text-align: center;
+        padding-top: 90px;
+        background-color: #000000;
+      }
+      .b22 > img {
+        width: 80vh;
+      }
+
+      .box3 {
+        display: grid;
+        grid-template-columns: 600px 600px;
+        grid-template-rows: 500px;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas: "b31 b32";
+        grid-area: box3;
+        background-color: #000000;
+      }
+
+      .b31 {
+        grid-area: b31;
+      }
+      .b31 > img {
+        width: 80vh;
+        padding-top: 50px;
+      }
+
+      .b32 {
+        grid-area: b32;
+
+        color: white;
+        text-align: left;
+        padding-left: 60px;
+        padding-top: 140px;
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif;
+        font-size: 20px;
+        margin-right: 16vh;
+      }
+      /* .b32>p{
+    font-size: 16px;
+ } */
+
+      .box4 {
+        display: grid;
+        grid-template-columns: 600px 600px;
+        grid-template-rows: 500px;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas: "b41 b42";
+        grid-area: box4;
+        background-color: rgb(0, 0, 0);
+      }
+
+      .b41 {
+        grid-area: b41;
+        color: white;
+        text-align: left;
+        padding-left: 90px;
+        padding-top: 160px;
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif;
+        font-size: 20px;
+        margin-right: 16vh;
+      }
+
+      .b42 > img {
+        width: 80vh;
+        padding-top: 70px;
+      }
+
+      .b42 {
+        grid-area: b42;
+      }
+
+      .box5 {
+        display: grid;
+        grid-template-columns: 600px 600px;
+        grid-template-rows: 500px;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas: "b51 b52";
+        grid-area: box5;
+        background-color: #000000;
+      }
+
+      .b51 {
+        grid-area: b51;
+      }
+      .b51 > img {
+        width: 80vh;
+        padding-top: 70px;
+      }
+
+      .b52 {
+        grid-area: b52;
+        color: white;
+        text-align: left;
+        padding-left: 90px;
+        padding-top: 130px;
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif;
+        font-size: 20px;
+        margin-right: 16vh;
+      }
+
+      .box6 {
+        display: grid;
+        grid-template-columns: 1200px;
+        grid-template-rows: 500px;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas: ".";
+        grid-area: box6;
+        background-color: #000000;
+      }
+
+      .box7 {
+        display: grid;
+        /* grid-template-columns: 200px 200px 200px 200px; */
+        /* grid-template-rows: 100px 300px 100px; */
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        justify-content: center;
+        align-content: stretch;
+        grid-template-areas:
+          "topbox topbox topbox topbox"
+          "b71 b72 b73 b74"
+          "bottombox bottombox bottombox bottombox";
+        grid-area: box7;
+        background-color: #000000;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      }
+
+
+      /* .topbox {
+        grid-area: topbox;
+        color: #999999;
+        padding-left: 40px;
+        
+        
+      }
+
+      .bottombox {
+        grid-area: bottombox;
+      }
+
+      .b71 {
+        color: #fff;
+        grid-area: b71;
+        list-style-type:none;
+        font-size: 20px;
+      }
+      .b72 ul{
+        grid-
+        list-style-type:none;
+      }
+      .b73 ul{
+        list-style-type:none;
+        
+      }
+      .b74 ul{
+        list-style-type:none;
+      }
+      .b71 ul{
+        list-style-type:none;
+      }
+      .b71 a{
+        color: #999999;
+      }
+      .b72 a{
+        color: #999999;
+      }
+      .b73 a{
+        color: #999999;
+      }
+      .b74 a{
+        color: #999999;
+      }
+
+      .b72 {
+        grid-area: b72;
+        font-size: 20px;
+      }
+
+      .b73 {
+        grid-area: b73;
+        font-size: 20px;
+      }
+
+      .b74 {
+        grid-area: b74;
+        font-size: 20px;
+      } */
+      .footer ,
+.footer a{
+    color: #999999;
+    font-size: 15px;
+}
+
+.footer p{
+  margin-top: 90px;
+    margin-bottom: 12px;
+    position: 20px;
+    padding-left: 30px;
+
+}
+
+.footer .footer-cols{
+    display: grid;
+    grid-template-columns: repeat(4 , 150px);
+    grid-gap: 150px;
+}
+
+.footer li{
+    line-height: 2.4;
+    list-style-type:none;
+}
+
+      .email-signup{
+        
+        /* background: #fff; */
+        
+        color: red;
+        /* display: flex;
+        align-items: center; */
+        
+      }
+      .email-signup button{
+        background-color: red;
+        border: 0;
+        outline: 0;
+        color: #fff;
+        font-size: 16px;
+        cursor: pointer;
+        padding: 15px 20px;
+        border-radius: 3px;
+      }
+      .email-signup input{
+        font-size: 16px;
+        display: inline-grid;
+    align-items: center;
+    grid-template-columns: 50% 40%;
+    border: 0;
+        outline: 0;
+        padding-left: 10px;
+        padding-right: 120px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        border-radius: 3px;
+
+
+        /* flex: 1;
+        
+        
+        padding: 10px 83px;
+        border-radius: 2px; */
+        /* margin-left: 20px; */
+      }
+      .faq{
+    text-align: center;
+}
+
+.faq h1{
+    /* padding-bottom: 10px; */
+    font-size: 32px;
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.questions{
+    display: flex;
+    flex-direction: column;
+    flex-basis: 40%;
+    align-items: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.questions li{
+    padding: 10px 30px;
+    margin: 5px;
+    font-size: 12px;
+    background-color: #303030;
+    color: white;
+    text-align: left;
+    width: 50%;
+    list-style-type:none;
+}
+
+.faq p{
+    padding-top: 10px;
+    font-size: 20px;
+    font-weight: 200;
+    color: #fff;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.input{
+    display: inline-grid;
+    align-items: center;
+    grid-template-columns: 50% 40%;
+}
+
+.input input{
+    width: 300px;
+    height: 30px;
+}
+
+.input button{ background-color: red;
+        border: 0;
+        outline: 0;
+        color: #fff;
+        font-size: 16px;
+        cursor: pointer;
+        padding: 10px 20px;
+        border-radius: 2px;
+        left: 20px;
+        width: 150px;
+        margin-left: 60px;
+        }
+
+
+
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="main">
+        <div class="box1">
+          <div class="logo"><img src="th__1_-removebg-preview (1).png" alt="logo" /></div>
+          <div class="a11">
+            
+            <!-- <div class="nav"> -->
+              <button class="language-btn">English <img src="down-icon.png" alt="gr"></button>
+              <button>Sign In</button>
+            <!-- </ivd> -->
+          </div>
+          <div class="b11">
+            <h1>Unlimited movies, TV shows and more.</h1>
+            <p>Watch anywhere, Cancel anytime</p>
+
+            <p>
+              Ready to watch? Enter your mail to create or restart your
+              membership.
+            </p>
+            <form action="" class="email-signup">
+              <input type="email" placeholder="Email address" required>
+              <button type="submit"><b>Get Started </b>
+
+              </button>
+            </form>
+          </div>
+        </div>
+        <div class="box2">
+          <div class="b21">
+            <h1>Enjoy on your TV</h1>
+            <p>
+              Watch on smart Tvs, playstation, Wbox, Chromecast, Apple TV,
+              Blu-ray players and more.
+            </p>
+          </div>
+          <div class="b22">
+            <img src="computer1.jpeg" alt="computer" />
+          </div>
+        </div>
+        <div class="box3">
+          <div class="b31">
+            <img src="phone.jpeg" alt="" />
+          </div>
+          <div class="b32">
+            <h1>Download your shows to watch offine.</h1>
+            <p>
+              Save your favourites easily and always have something to watch.
+            </p>
+          </div>
+        </div>
+        <div class="box4">
+          <div class="b41">
+            <h1>Watch everywhere</h1>
+            <p>
+              Stream unlimited movies and TV shows on your phone, tablet, laptop
+              and TV.
+            </p>
+          </div>
+          <div class="b42">
+            <img src="screen.jpeg" alt="" />
+          </div>
+        </div>
+        <div class="box5">
+          <div class="b51">
+            <img src="child.jpeg" alt="" />
+          </div>
+          <div class="b52">
+            <h1>Create profiles for children</h1>
+            <p>
+              Send children on adventures with their favourite characters in a
+              space made just for them-free with your membership.
+            </p>
+          </div>
+        </div>
+        
+        <div class="box6">
+          
+          <section class="lastsec">
+            <div class="faq">
+                <h1>Frequently Asked Questions</h1>
+                <ul class="questions">
+                    <li>What is Netflix?</li>
+                    <li>How much does Netflix cost?</li>
+                    <li>Where can I watch?</li>
+                    <li>How do I cancel?</li>
+                    <li>What can I watch on Netflix?</li>
+                    <li>Is Netflix good for kids?</li>
+                </ul>
+                <p>Ready to watch? Enter your email to create or restart your membership.</p>
+                <div class="input">
+                    <input type="email" name="email" placeholder="Email Address">
+                    <a href="#" class="btn-rounded"><button>Get started ></button></a>
+                </div>
+            </div>
+        </section>
+
+        </div>
+    
+        <div class="box7">
+          <footer class="footer">
+            <p>Questions? Call 000-8000-18</p>
+            <div class="footer-cols">
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Investor</a></li>
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">Jobs</a></li>
+                    
+                </ul>
+                <ul>
+                    <li><a href="#">Help Centre</a></li>
+                    
+                    <li><a href="#">Cookie Preferences</a></li>
+                    <li><a href="#">Watch for Free</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">Account</a></li>
+                    <li><a href="#">Ways to Watch</a></li>
+                    <li><a href="#">Speed Test</a></li>
+                    <li><a href="#">Legal Notices</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">Media Centre</a></li>
+                    <li><a href="#">Terms of Use</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Netflix Originals</a></li>
+                </ul>
+            </div>
+        </footer>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
